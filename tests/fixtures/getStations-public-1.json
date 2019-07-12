@@ -1,0 +1,137 @@
+{
+    "links": {
+        "first": "https://station.services.pbs.org/api/public/v1/stations/?page-size=2",
+        "last": "https://station.services.pbs.org/api/public/v1/stations/?page=2&page-size=2",
+        "next": "https://station.services.pbs.org/api/public/v1/stations/?page=2&page-size=2",
+        "prev": null,
+        "self": "https://station.services.pbs.org/api/public/v1/stations/?page-size=2"
+    },
+    "meta": {
+        "filter": {
+            "call_sign": "https://station.services.pbs.org/api/public/v1/stations/?call_sign=",
+            "id": "https://station.services.pbs.org/api/public/v1/stations/?id="
+        },
+        "type": "collection",
+        "pagination": {
+            "per_page": 2,
+            "count": 4
+        }
+    },
+    "data": [
+        {
+            "links": {
+                "self": "https://station.services.pbs.org/api/public/v1/stations/838f7279-cacf-4561-bd33-ac9a4b1429e8/"
+            },
+            "id": "838f7279-cacf-4561-bd33-ac9a4b1429e8",
+            "type": "station",
+            "attributes": {
+                "call_sign": "KACV",
+                "full_common_name": "Panhandle PBS",
+                "short_common_name": "PPBS",
+                "tvss_url": "http://www.panhandlepbs.org/schedule/#page=schedule&day=20150803&provider=Broadcast",
+                "donate_url": "http://www.panhandlepbs.org/donate/",
+                "timezone": "America/Chicago",
+                "secondary_timezone": "",
+                "video_portal_url": "http://video.kacvtv.org",
+                "video_portal_banner_url": "http://www.panhandlepbs.org/",
+                "website_url": "http://www.panhandlepbs.org/home/",
+                "facebook_url": "https://www.facebook.com/KACVTV",
+                "twitter_url": "http://twitter.com/PanhandlePBS",
+                "station_kids_url": "",
+                "passport_url": "https://kacv.secureallegiance.com/kacv/WebModule/Signon.aspx?P=CALLCENTER&PAGETYPE=PLG&CHECK=fiYWhgtNKHHv9jDXe9k%2f4L1YhDw50SikSh2nq0qouhg%3d",
+                "telephone": "(806) 371-5222",
+                "fax": "(806) 371-5258",
+                "city": "Amarillo",
+                "state": "TX",
+                "address_line_1": "2408 S. Jackson",
+                "address_line_2": "P.O. Box 447",
+                "zip_code": 79178,
+                "country_code": "US",
+                "email": "PanhandlePBS@actx.edu",
+                "tag_line": "",
+                "page_tracking": "UA-10779830-4",
+                "event_tracking": "UA-10779830-4",
+                "primary_channel": "",
+                "primetime_start": "7PM",
+                "images": [
+                    {
+                        "profile": "black-logo",
+                        "url": "https://image.pbs.org/stations/kacv-black-logo-xqncCDm.png"
+                    },
+                    {
+                        "profile": "white-logo",
+                        "url": "https://image.pbs.org/stations/kacv-white-logo-e4BEMp6.png"
+                    },
+                    {
+                        "profile": "color-logo",
+                        "url": "https://image.pbs.org/stations/kacv-color-logo-Dajm8cP.png"
+                    },
+                    {
+                        "profile": "station-scenery-11",
+                        "url": "https://image.pbs.org/stations/kacv-station-scenery-11-WWd502M.jpg"
+                    }
+                ],
+                "updated_at": "2018-03-09T18:06:11.218494Z"
+            }
+        },
+        {
+            "links": {
+                "self": "https://station.services.pbs.org/api/public/v1/stations/6d08b852-2c19-4eb7-9348-a5e15b685357/"
+            },
+            "id": "6d08b852-2c19-4eb7-9348-a5e15b685357",
+            "type": "station",
+            "attributes": {
+                "call_sign": "KAET",
+                "full_common_name": "Arizona PBS",
+                "short_common_name": "ArizonaPBS",
+                "tvss_url": "https://azpbs.org/schedule",
+                "donate_url": "https://azpbs.org/support/",
+                "timezone": "America/Phoenix",
+                "secondary_timezone": "",
+                "video_portal_url": "http://video.azpbs.org",
+                "video_portal_banner_url": "https://azpbs.org/",
+                "website_url": "https://azpbs.org",
+                "facebook_url": "https://www.facebook.com/arizonapbs",
+                "twitter_url": "https://twitter.com/arizonapbs",
+                "station_kids_url": "https://azpbs.org/kids",
+                "passport_url": "http://kaet.convio.net/site/Donation2?df_id=14065&mfc_pref=T&14065.donation=form1",
+                "telephone": "(602) 496-8888",
+                "fax": "(602) 496-8045",
+                "city": "Phoenix",
+                "state": "AZ",
+                "address_line_1": "Arizona PBS/KAET-TV",
+                "address_line_2": "555 North Central Avenue, Suite 500",
+                "zip_code": 85004,
+                "country_code": "US",
+                "email": "supportAZPBS@asu.edu",
+                "tag_line": "",
+                "page_tracking": "UA-7759826-2",
+                "event_tracking": "UA-7759826-2",
+                "primary_channel": "Arizona PBS",
+                "primetime_start": "7PM",
+                "images": [
+                    {
+                        "profile": "black-logo",
+                        "url": "https://image.pbs.org/stations/kaet-black-logo-IyglqJE.png"
+                    },
+                    {
+                        "profile": "white-logo",
+                        "url": "https://image.pbs.org/stations/kaet-white-logo-Iv7cIbv.png"
+                    },
+                    {
+                        "profile": "color-logo",
+                        "url": "https://image.pbs.org/stations/kaet-color-logo-KkYt9tL.png"
+                    },
+                    {
+                        "profile": "station-scenery-11",
+                        "url": "https://image.pbs.org/stations/kaet-station-scenery-11-B44CPT2.jpg"
+                    }
+                ],
+                "updated_at": "2017-10-24T08:28:35.914103Z"
+            }
+        }
+    ],
+    "jsonapi": {
+        "version": "1.0"
+    }
+}

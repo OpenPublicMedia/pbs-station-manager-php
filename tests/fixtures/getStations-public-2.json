@@ -1,0 +1,137 @@
+{
+    "links": {
+        "first": "https://station.services.pbs.org/api/public/v1/stations/?page-size=2",
+        "last": "https://station.services.pbs.org/api/public/v1/stations/?page=2&page-size=2",
+        "prev": "https://station.services.pbs.org/api/public/v1/stations/?page-size=2",
+        "self": "https://station.services.pbs.org/api/public/v1/stations/?page-size=2&page=2",
+        "next": null
+    },
+    "meta": {
+        "filter": {
+            "call_sign": "https://station.services.pbs.org/api/public/v1/stations/?call_sign=",
+            "id": "https://station.services.pbs.org/api/public/v1/stations/?id="
+        },
+        "type": "collection",
+        "pagination": {
+            "per_page": 2,
+            "count": 4
+        }
+    },
+    "data": [
+        {
+            "links": {
+                "self": "https://station.services.pbs.org/api/public/v1/stations/8a949120-ff4f-4d71-9c96-ca4978e3b39a/"
+            },
+            "id": "8a949120-ff4f-4d71-9c96-ca4978e3b39a",
+            "type": "station",
+            "attributes": {
+                "call_sign": "KAID",
+                "full_common_name": "Idaho Public Television",
+                "short_common_name": "IdahoPTV",
+                "tvss_url": "http://idahoptv.org/schedules/",
+                "donate_url": "http://idahoptv.org/support_new/",
+                "timezone": "America/Denver",
+                "secondary_timezone": "",
+                "video_portal_url": "http://video.idahoptv.org",
+                "video_portal_banner_url": "http://idahoptv.org/",
+                "website_url": "http://idahoptv.org",
+                "facebook_url": "https://www.facebook.com/idahoptv/",
+                "twitter_url": "https://twitter.com/IdahoPTV",
+                "station_kids_url": "http://idahoptv.org/kids/",
+                "passport_url": "https://support.idahoptv.org/membership/WebModule/Donate.aspx?P=PASSPORT&PAGETYPE=PLG&CHECK=wD5h0wdH7y06egm5%2fkW7sm3L5BYddGq6PVAl6UEf65g%3d",
+                "telephone": "(208) 373-7220",
+                "fax": "(208) 373-7245",
+                "city": "Boise",
+                "state": "ID",
+                "address_line_1": "Idaho Public Television",
+                "address_line_2": "1455 N Orchard St",
+                "zip_code": 83706,
+                "country_code": "US",
+                "email": "idptv@idahoptv.org",
+                "tag_line": "",
+                "page_tracking": "UA-4837220-1",
+                "event_tracking": "UA-4837220-2",
+                "primary_channel": "KAID HDTV",
+                "primetime_start": "7PM",
+                "images": [
+                    {
+                        "profile": "black-logo",
+                        "url": "https://image.pbs.org/stations/kaid-black-logo-Ij0ia1C.png"
+                    },
+                    {
+                        "profile": "white-logo",
+                        "url": "https://image.pbs.org/stations/kaid-white-logo-u1lgeRK.png"
+                    },
+                    {
+                        "profile": "color-logo",
+                        "url": "https://image.pbs.org/stations/kaid-color-logo-HCG0v8g.png"
+                    },
+                    {
+                        "profile": "station-scenery-11",
+                        "url": "https://image.pbs.org/stations/kaid-station-scenery-11-hoF7ono.jpg"
+                    }
+                ],
+                "updated_at": "2019-04-18T18:12:52.155946Z"
+            }
+        },
+        {
+            "links": {
+                "self": "https://station.services.pbs.org/api/public/v1/stations/241f6bfb-7b98-4cbd-af3a-3bf219bdb80f/"
+            },
+            "id": "241f6bfb-7b98-4cbd-af3a-3bf219bdb80f",
+            "type": "station",
+            "attributes": {
+                "call_sign": "KAKM",
+                "full_common_name": "Alaska Public Media",
+                "short_common_name": "AK",
+                "tvss_url": "http://alaskapublic.org/kakm/schedule/",
+                "donate_url": "http://alaskapublic.org/support/",
+                "timezone": "America/Anchorage",
+                "secondary_timezone": "",
+                "video_portal_url": "http://video.alaskapublic.org",
+                "video_portal_banner_url": "http://www.alaskapublic.org/",
+                "website_url": "http://alaskapublic.org/kakm",
+                "facebook_url": "https://www.facebook.com/alaskapublic/",
+                "twitter_url": "https://twitter.com/alaskapublic",
+                "station_kids_url": "http://www.alaskapublic.org/kids-club/",
+                "passport_url": "https://alaskapublic.secureallegiance.com/kska/WebModule/Donate.aspx?P=PASSCOPY&PAGETYPE=PLG&CHECK=mNnkzMw%2fC9b5PJoE5kV2%2bG3L5BYddGq6PVAl6UEf65g%3d&referrer=http://www.pbs.org/video/2365637128/",
+                "telephone": "(907) 550-8400",
+                "fax": "(907) 550-8401",
+                "city": "Anchorage",
+                "state": "AK",
+                "address_line_1": "Alaska Public Telecommunications, Inc. / KAKM / KSKA / APRN",
+                "address_line_2": "3877 University Dr",
+                "zip_code": 99508,
+                "country_code": "US",
+                "email": "mwalker@alaskapublic.org",
+                "tag_line": "Connecting Alaskans. Life informed.",
+                "page_tracking": "UA-1501494-12",
+                "event_tracking": "UA-1501494-12",
+                "primary_channel": "Alaska Public Television HDTV",
+                "primetime_start": "7PM",
+                "images": [
+                    {
+                        "profile": "black-logo",
+                        "url": "https://image.pbs.org/stations/kakm-black-logo-V8b5P0g.png"
+                    },
+                    {
+                        "profile": "white-logo",
+                        "url": "https://image.pbs.org/stations/kakm-white-logo-dI9TSAZ.png"
+                    },
+                    {
+                        "profile": "color-logo",
+                        "url": "https://image.pbs.org/stations/kakm-color-logo-WRiXY6t.png"
+                    },
+                    {
+                        "profile": "station-scenery-11",
+                        "url": "https://image.pbs.org/stations/kakm-station-scenery-11-O3a7OTr.jpg"
+                    }
+                ],
+                "updated_at": "2018-09-12T16:46:55.192240Z"
+            }
+        }
+    ],
+    "jsonapi": {
+        "version": "1.0"
+    }
+}

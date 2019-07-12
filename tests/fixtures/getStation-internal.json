@@ -1,0 +1,68 @@
+{
+    "links": {
+        "self": "https://station.services.pbs.org/api/v1/stations/8a949120-ff4f-4d71-9c96-ca4978e3b39a/"
+    },
+    "data": {
+        "type": "station",
+        "id": "8a949120-ff4f-4d71-9c96-ca4978e3b39a",
+        "attributes": {
+            "call_sign": "KAID",
+            "full_common_name": "Idaho Public Television",
+            "short_common_name": "IdahoPTV",
+            "tvss_url": "http://idahoptv.org/schedules/",
+            "donate_url": "http://idahoptv.org/support_new/",
+            "kids_live_stream_url": "https://example.com",
+            "timezone": "America/Denver",
+            "secondary_timezone": "",
+            "video_portal_url": "http://video.idahoptv.org",
+            "video_portal_banner_url": "http://idahoptv.org/",
+            "website_url": "http://idahoptv.org",
+            "facebook_url": "https://www.facebook.com/idahoptv/",
+            "twitter_url": "https://twitter.com/IdahoPTV",
+            "station_kids_url": "http://idahoptv.org/kids/",
+            "passport_url": "https://support.idahoptv.org/membership/WebModule/Donate.aspx?P=PASSPORT&PAGETYPE=PLG&CHECK=wD5h0wdH7y06egm5%2fkW7sm3L5BYddGq6PVAl6UEf65g%3d",
+            "telephone": "(208) 373-7220",
+            "fax": "(208) 373-7245",
+            "pdp": true,
+            "city": "Boise",
+            "state": "ID",
+            "address_line_1": "Idaho Public Television",
+            "address_line_2": "1455 N Orchard St",
+            "zip_code": 83706,
+            "country_code": "US",
+            "email": "idptv@idahoptv.org",
+            "tag_line": "",
+            "page_tracking": "UA-4837220-1",
+            "event_tracking": "UA-4837220-2",
+            "passport_enabled": true,
+            "annual_passport_qualifying_amount": 100000.0,
+            "primary_channel": "KAID HDTV",
+            "primetime_start": "7PM",
+            "images": [
+                {
+                    "url": "https://image.pbs.org/stations/kaid-black-logo-Ij0ia1C.png",
+                    "profile": "black-logo"
+                },
+                {
+                    "url": "https://image.pbs.org/stations/kaid-white-logo-u1lgeRK.png",
+                    "profile": "white-logo"
+                },
+                {
+                    "url": "https://image.pbs.org/stations/kaid-color-logo-HCG0v8g.png",
+                    "profile": "color-logo"
+                },
+                {
+                    "url": "https://image.pbs.org/stations/kaid-station-scenery-11-hoF7ono.jpg",
+                    "profile": "station-scenery-11"
+                }
+            ],
+            "updated_at": "2019-04-18T18:12:52.155946Z"
+        }
+    },
+    "meta": {
+        "type": "resource"
+    },
+    "jsonapi": {
+        "version": "1.0"
+    }
+}

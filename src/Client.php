@@ -95,10 +95,11 @@ class Client
                 'query' => self::buildQuery($query)
             ]);
         } catch (GuzzleException $e) {
-            // Implementors should handle this exception as the API responds 404 for invalid IDs.
             throw new RuntimeException($e->getMessage());
         }
         if ($response->getStatusCode() != 200) {
+            // Implementors should handle this as the API responds 404 for
+            // invalid IDs.
             throw new RuntimeException($response->getReasonPhrase(), $response->getStatusCode());
         }
         return $response;
