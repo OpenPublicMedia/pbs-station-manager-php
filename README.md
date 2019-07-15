@@ -3,6 +3,14 @@
 This library abstracts interactions with the 
 [PBS Station Manager API](https://docs.pbs.org/display/SM/API).
 
+## Installation
+
+Install via composer:
+
+```bash
+composer require openpublicmedia/pbs-station-manager-php
+```
+
 ## Use
 
 The primary class provided by this library is the 
@@ -29,8 +37,8 @@ plural getter.
 ```php
 use OpenPublicMedia\PbsStationManager\Client;
 
-$api_key = 'xxxxxxxxxxxxxx'
-$api_secret = 'xxxxxxxxxxx'
+$api_key = 'xxxxxxxxxxxxxx';
+$api_secret = 'xxxxxxxxxxx';
 
 $client = new Client($api_key, $api_secret);
 ```
