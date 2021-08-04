@@ -101,6 +101,11 @@ class Station
     /**
      * @var string
      */
+    private $learnMorePassportUrl;
+
+    /**
+     * @var string
+     */
     private $facebookUrl;
 
     /**
@@ -201,6 +206,26 @@ class Station
      * @var DateTime
      */
     private $updatedAt;
+
+    /**
+     * @var string
+     */
+    private $gaLiveStreamUrl;
+
+    /**
+     * @var bool
+     */
+    private $displayLogoOverlay;
+
+    /**
+     * @var string
+     */
+    private $gaLiveStreamFeedCid;
+
+    /**
+     * @var string
+     */
+    private $playerCode;
 
     /**
      * Station constructor.
@@ -501,6 +526,22 @@ class Station
     public function setWebsiteUrl(?string $websiteUrl)
     {
         $this->websiteUrl = $websiteUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLearnMorePassportUrl(): string
+    {
+        return $this->learnMorePassportUrl;
+    }
+
+    /**
+     * @param string $learnMorePassportUrl
+     */
+    public function setLearnMorePassportUrl(string $learnMorePassportUrl): void
+    {
+        $this->learnMorePassportUrl = $learnMorePassportUrl;
     }
 
     /**
@@ -824,5 +865,69 @@ class Station
     public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGaLiveStreamUrl(): string
+    {
+        return $this->gaLiveStreamUrl;
+    }
+
+    /**
+     * @param string $gaLiveStreamUrl
+     */
+    public function setGaLiveStreamUrl(string $gaLiveStreamUrl): void
+    {
+        $this->gaLiveStreamUrl = $gaLiveStreamUrl;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDisplayLogoOverlay(): bool
+    {
+        return $this->displayLogoOverlay;
+    }
+
+    /**
+     * @param bool $displayLogoOverlay
+     */
+    public function setDisplayLogoOverlay(bool $displayLogoOverlay): void
+    {
+        $this->displayLogoOverlay = $displayLogoOverlay;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGaLiveStreamFeedCid(): string
+    {
+        return $this->gaLiveStreamFeedCid;
+    }
+
+    /**
+     * @param string $gaLiveStreamFeedCid
+     */
+    public function setGaLiveStreamFeedCid(string $gaLiveStreamFeedCid): void
+    {
+        $this->gaLiveStreamFeedCid = $gaLiveStreamFeedCid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPlayerCode(): string
+    {
+        return $this->playerCode;
+    }
+
+    /**
+     * @param string $playerCode
+     */
+    public function setPlayerCode(string $playerCode): void
+    {
+        $this->playerCode = $playerCode;
     }
 }
