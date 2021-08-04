@@ -192,7 +192,7 @@ class Client
      */
     public static function buildQuery(array $parameters): string
     {
-        $query = Query::createFromPairs($parameters);
+        $query = Query::createFromParams($parameters);
         return (string) $query;
     }
 
