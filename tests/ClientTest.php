@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace OpenPublicMedia\PbsStationManager\Test;
 
-use Generator;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Handler\MockHandler;
-use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use OpenPublicMedia\PbsStationManager\Client;
 use OpenPublicMedia\PbsStationManager\Entity\Station;
 use PHPUnit\Framework\TestCase;
-use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
 
 /**
@@ -66,7 +62,7 @@ class ClientTest extends TestCase
      * @return Response
      *   Guzzle 200 response with JSON body content.
      */
-    private function jsonResponse($name): Response
+    private function jsonResponse(string $name): Response
     {
         return new Response(
             200,
