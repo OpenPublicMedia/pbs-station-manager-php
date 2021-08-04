@@ -1,6 +1,6 @@
 # PBS Station Manager PHP Library
 
-This library abstracts interactions with the 
+This library abstracts interactions with the
 [PBS Station Manager API](https://docs.pbs.org/display/SM/API).
 
 ## Installation
@@ -13,21 +13,21 @@ composer require openpublicmedia/pbs-station-manager-php
 
 ## Use
 
-The primary class provided by this library is the 
-`OpenPublicMedia\PbsStationManager\Client`. A `Client` instance can be used to 
+The primary class provided by this library is the
+`OpenPublicMedia\PbsStationManager\Client`. A `Client` instance can be used to
 query the API in various ways. An API key and secret is optional, as the Station
 Manager API provides public and internal endpoints.
 
 ### Response data structures
 
-The API currently only support retrieving station information so `Client` 
+The API currently only support retrieving station information so `Client`
 provides two methods:
 
 - `getStation($id)`
 - `getStations()`
 
 Both methods return `OpenPublicMedia\PbsStationManager\Entity\Station` instances.
-A single instance for the singular getter and an array of instances for the 
+A single instance for the singular getter and an array of instances for the
 plural getter.
 
 ### Examples
@@ -75,7 +75,7 @@ class OpenPublicMedia\PbsStationManager\Entity\Station#40 (35) {
   private $addressLine2 => NULL
   private $city => string(7) "Seattle"
   private $state => string(2) "WA"
-  private $zipCode => int(98109)
+  private $zipCode => string(5) "98109"
   private $countryCode => string(2) "US"
   private $email => string(20) "membership@kcts9.org"
   private $telephone => string(14) "(800) 937-5287"

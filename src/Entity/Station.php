@@ -158,7 +158,7 @@ class Station
     /**
      * The API docs claim this is string, but the API sends an integer.
      *
-     * @var int
+     * @var string
      */
     private $zipCode;
 
@@ -683,17 +683,17 @@ class Station
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getZipCode(): ?int
+    public function getZipCode(): ?string
     {
         return $this->zipCode;
     }
 
     /**
-     * @param int|null $zipCode
+     * @param string|null $zipCode
      */
-    public function setZipCode(?int $zipCode)
+    public function setZipCode(?string $zipCode)
     {
         $this->zipCode = $zipCode;
     }
