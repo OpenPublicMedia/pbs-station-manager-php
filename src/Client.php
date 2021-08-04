@@ -192,7 +192,9 @@ class Client
      */
     public static function buildQuery(array $parameters): string
     {
-        $query = Query::createFromParams($parameters)->withoutNumericIndices();
+        $query = Query::createFromParams($parameters)
+            ->withoutEmptyPairs()
+            ->withoutNumericIndices();
 
         // The `withoutNumericIndices` method above removes the _numeric_ part
         // of the index only, leaving behind the "[]" so e.g. "id[2]" becomes
@@ -230,11 +232,14 @@ class Client
      *
      * @url https://docs.pbs.org/display/SM/Station+Manager+Internal+API#StationManagerInternalAPI-Station:list
      *
+     * @param array $ids
+     *   GUIDs of specific stations to get.
+     *
      * @return array
      *   Station instances keyed by Station GUID.
      */
-    public function getStations(): array
+    public function getStations(array $ids = []): array
     {
-        return $this->getAll('stations');
+        return $this->getAll('stations', ['id' => $ids]);
     }
 }
