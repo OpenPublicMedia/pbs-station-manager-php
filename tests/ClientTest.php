@@ -117,4 +117,12 @@ class ClientTest extends TestCase
         $this->assertCount(4, $stations);
         $this->assertInstanceOf(Station::class, current($stations));
     }
+
+    public function testBuildGetQuery()
+    {
+        $this->assertEquals(
+            'id=one&id=two&id=three',
+            Client::buildQuery(['id' => ['one', 'two', 'three']])
+        );
+    }
 }

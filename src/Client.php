@@ -192,8 +192,15 @@ class Client
      */
     public static function buildQuery(array $parameters): string
     {
-        $query = Query::createFromParams($parameters);
-        return (string) $query;
+        $query = Query::createFromParams($parameters)->withoutNumericIndices();
+
+        // The `withoutNumericIndices` method above removes the _numeric_ part
+        // of the index only, leaving behind the "[]" so e.g. "id[2]" becomes
+        // "id[]". For Station Manager, we only want to repeat the query
+        // parameter so we must further replace e.g. "id[]" with just "id". The
+        // query content is in RFC 3986 format so encoded characters are used
+        // for the replacement.
+        return str_replace('%5B%5D=', '=', $query->getContent());
     }
 
     /**
