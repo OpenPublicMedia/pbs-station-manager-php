@@ -49,7 +49,7 @@ abstract class EntityBase
                 throw new InvalidArgumentException('Invalid property key: ' . $key);
             }
 
-            // Convert string datetime values (assume API format with timezone).
+            // Convert string datetime values (assume format with timezone).
             if ($key === 'created_at' || $key === 'updated_at') {
                 try {
                     $value = new DateTime($value);

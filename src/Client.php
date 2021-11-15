@@ -48,7 +48,7 @@ class Client
      *
      * @var GuzzleClient
      */
-    protected $client;
+    protected GuzzleClient $client;
 
     /**
      * Client constructor.
@@ -138,7 +138,7 @@ class Client
     }
 
     /**
-     * Gets the a single object by ID from an API request.
+     * Gets a single object by ID from an API request.
      *
      * @param string $endpoint
      *   URL to query.
@@ -167,7 +167,7 @@ class Client
      *   A full response from the API.
      *
      * @return int|null
-     *   The number of the next page or null if there is no next page.
+     *   The number of the next page or null if there is not a next page.
      */
     private static function getNextPage(array $response): ?int
     {
@@ -202,8 +202,8 @@ class Client
 
         // The `withoutNumericIndices` method above removes the _numeric_ part
         // of the index only, leaving behind the "[]" so e.g. "id[2]" becomes
-        // "id[]". For Station Manager, we only want to repeat the query
-        // parameter so we must further replace e.g. "id[]" with just "id". The
+        // "id[]". For Station Manager we only want to repeat the query
+        // parameter, so we must further replace e.g. "id[]" with just "id". The
         // query content is in RFC 3986 format so encoded characters are used
         // for the replacement.
         return str_replace('%5B%5D=', '=', $query->getContent());

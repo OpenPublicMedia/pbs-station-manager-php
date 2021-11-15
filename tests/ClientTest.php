@@ -23,17 +23,17 @@ class ClientTest extends TestCase
     /**
      * @var Client
      */
-    protected $publicClient;
+    protected Client $publicClient;
 
     /**
      * @var Client
      */
-    protected $internalClient;
+    protected Client $internalClient;
 
     /**
      * @var MockHandler
      */
-    protected $mockHandler;
+    protected MockHandler $mockHandler;
 
     /**
      * Create clients with mock handler.

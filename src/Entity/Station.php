@@ -6,10 +6,6 @@ declare(strict_types=1);
 namespace OpenPublicMedia\PbsStationManager\Entity;
 
 use DateTime;
-use Exception;
-use InvalidArgumentException;
-use Jawira\CaseConverter\CaseConverterException;
-use Jawira\CaseConverter\Convert;
 
 /**
  * Represents a station object.
@@ -18,220 +14,51 @@ use Jawira\CaseConverter\Convert;
  */
 class Station extends EntityBase
 {
-    /**
-     * @var string
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $callSign;
-
-    /**
-     * @var string
-     */
-    private $fullCommonName;
-
-    /**
-     * @var string
-     */
-    private $shortCommonName;
-
-    /**
-     * @var string
-     */
-    private $tagLine;
-
-    /**
-     * @var string
-     */
-    private $timezone;
-
-    /**
-     * @var string
-     */
-    private $secondaryTimezone;
-
-    /**
-     * Internal API only.
-     *
-     * @var bool
-     */
-    private $passportEnabled;
-
-    /**
-     * Internal API only.
-     *
-     * @var float
-     */
-    private $annualPassportQualifyingAmount;
-
-    /**
-     * @var string
-     */
-    private $primaryChannel;
-
-    /**
-     * @var string
-     */
-    private $primetimeStart;
-
-    /**
-     * @var string
-     */
-    private $tvssUrl;
-
-    /**
-     * @var string
-     */
-    private $donateUrl;
-
-    /**
-     * Internal API only.
-     *
-     * @var string
-     */
-    private $kidsLiveStreamUrl;
-
-    /**
-     * @var string
-     */
-    private $websiteUrl;
-
-    /**
-     * @var string
-     */
-    private $learnMorePassportUrl;
-
-    /**
-     * @var string
-     */
-    private $facebookUrl;
-
-    /**
-     * @var string
-     */
-    private $twitterUrl;
-
-    /**
-     * @var string
-     */
-    private $stationKidsUrl;
-
-    /**
-     * @var string
-     */
-    private $passportUrl;
-
-    /**
-     * @var string
-     */
-    private $videoPortalUrl;
-
-    /**
-     * @var string
-     */
-    private $videoPortalBannerUrl;
-
-    /**
-     * Internal API only.
-     *
-     * @var bool
-     */
-    private $pdp;
-
-    /**
-     * @var string
-     */
-    private $addressLine1;
-
-    /**
-     * @var string
-     */
-    private $addressLine2;
-
-    /**
-     * @var string
-     */
-    private $city;
-
-    /**
-     * @var string
-     */
-    private $state;
-
-    /**
-     * The API docs claim this is string, but the API sends an integer.
-     *
-     * @var string
-     */
-    private $zipCode;
-
-    /**
-     * @var string
-     */
-    private $countryCode;
-
-    /**
-     * @var string
-     */
-    private $email;
-
-    /**
-     * @var string
-     */
-    private $telephone;
-
-    /**
-     * @var string
-     */
-    private $fax;
-
-    /**
-     * @var array
-     */
-    private $images;
-
-    /**
-     * @var string
-     */
-    private $pageTracking;
-
-    /**
-     * @var string
-     */
-    private $eventTracking;
-
-    /**
-     * @var DateTime
-     */
-    private $updatedAt;
-
-    /**
-     * @var string
-     */
-    private $gaLiveStreamUrl;
-
-    /**
-     * @var bool
-     */
-    private $displayLogoOverlay;
-
-    /**
-     * @var string
-     */
-    private $gaLiveStreamFeedCid;
-
-    /**
-     * @var string
-     */
-    private $playerCode;
+    private string $id;
+    private string $callSign;
+    private string $fullCommonName;
+    private string $shortCommonName;
+    private string $tagLine;
+    private string $timezone;
+    private string $secondaryTimezone;
+    private bool $passportEnabled;
+    private float $annualPassportQualifyingAmount;
+    private string $primaryChannel;
+    private string $primetimeStart;
+    private string $tvssUrl;
+    private string $donateUrl;
+    private string $kidsLiveStreamUrl;
+    private string $websiteUrl;
+    private string $learnMorePassportUrl;
+    private string $facebookUrl;
+    private string $twitterUrl;
+    private string $stationKidsUrl;
+    private string $passportUrl;
+    private string $videoPortalUrl;
+    private string $videoPortalBannerUrl;
+    private bool $pdp;
+    private string $addressLine1;
+    private string $addressLine2;
+    private string $city;
+    private string $state;
+    private string $zipCode;
+    private string $countryCode;
+    private string $email;
+    private string $telephone;
+    private string $fax;
+    private array $images;
+    private string $pageTracking;
+    private string $eventTracking;
+    private DateTime $updatedAt;
+    private string $gaLiveStreamUrl;
+    private bool $displayLogoOverlay;
+    private string $gaLiveStreamFeedCid;
+    private string $playerCode;
 
     /**
      * @var \OpenPublicMedia\PbsStationManager\Entity\LivestreamFeed[]
      */
-    private $livestreamFeeds;
+    private array $livestreamFeeds;
 
     /**
      * Base entity constructor.
