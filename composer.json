@@ -4,7 +4,7 @@
     "type": "library",
     "license": "Apache-2.0",
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^6.3 || ^7.0",
         "jawira/case-converter": "^3.0",

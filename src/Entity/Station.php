@@ -12,11 +12,11 @@ use Jawira\CaseConverter\CaseConverterException;
 use Jawira\CaseConverter\Convert;
 
 /**
- * Class Station
+ * Represents a station object.
  *
  * @package OpenPublicMedia\PbsStationManager\Entity
  */
-class Station
+class Station extends EntityBase
 {
     /**
      * @var string
@@ -229,7 +229,12 @@ class Station
     private $playerCode;
 
     /**
-     * Station constructor.
+     * @var \OpenPublicMedia\PbsStationManager\Entity\LivestreamFeed[]
+     */
+    private $livestreamFeeds;
+
+    /**
+     * Base entity constructor.
      *
      * @param string $id
      *   GUID of the Station.
@@ -240,44 +245,7 @@ class Station
     public function __construct(string $id, array $apiAttributes = [])
     {
         $this->id = $id;
-        foreach ($apiAttributes as $key => $value) {
-            // Ignore null and empty string values.
-            if (is_null($value) || $value === '') {
-                continue;
-            }
-
-            // Convert snake_case keys to camelCase.
-            try {
-                $keyValue = new Convert('set_' . $key);
-                $method = $keyValue->toCamel();
-            } catch (CaseConverterException $e) {
-                throw new InvalidArgumentException(
-                    'Could not handle attribute key: ' . $key,
-                    $e->getCode(),
-                    $e
-                );
-            }
-
-            // Verify that the property is valid.
-            if (!method_exists($this, $method)) {
-                throw new InvalidArgumentException('Invalid property key: ' . $key);
-            }
-
-            // Convert string datetime values (assume API format with timezone).
-            if ($key == 'updated_at') {
-                try {
-                    $value = new DateTime($value);
-                } catch (Exception $e) {
-                    throw new InvalidArgumentException(
-                        sprintf('Could not convert datetime string: %s (key: %s)', $value, $key),
-                        $e->getCode(),
-                        $e
-                    );
-                }
-            }
-
-            $this->{$method}($value);
-        }
+        parent::__construct($apiAttributes);
     }
 
     /**
@@ -930,5 +898,27 @@ class Station
     public function setPlayerCode(string $playerCode): void
     {
         $this->playerCode = $playerCode;
+    }
+
+    /**
+     * @return \OpenPublicMedia\PbsStationManager\Entity\LivestreamFeed[]
+     */
+    public function getLivestreamFeeds(): array
+    {
+        return $this->livestreamFeeds;
+    }
+
+    /**
+     * @param array $livestreamFeeds
+     */
+    public function setLivestreamFeeds(array $livestreamFeeds): void
+    {
+        foreach ($livestreamFeeds as $livestreamFeed) {
+            if ($livestreamFeed instanceof LivestreamFeed) {
+                $this->livestreamFeeds[] = $livestreamFeed;
+            } else {
+                $this->livestreamFeeds[] = new LivestreamFeed($livestreamFeed);
+            }
+        }
     }
 }

@@ -196,6 +196,10 @@ class Client
             ->withoutEmptyPairs()
             ->withoutNumericIndices();
 
+        if ($query->count() === 0) {
+            return '';
+        }
+
         // The `withoutNumericIndices` method above removes the _numeric_ part
         // of the index only, leaving behind the "[]" so e.g. "id[2]" becomes
         // "id[]". For Station Manager, we only want to repeat the query
