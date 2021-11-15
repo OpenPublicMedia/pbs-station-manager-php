@@ -56,7 +56,45 @@
                     "profile": "station-scenery-11"
                 }
             ],
-            "updated_at": "2019-04-18T18:12:52.155946Z"
+            "updated_at": "2019-04-18T18:12:52.155946Z",
+            "ga_live_stream_url": "https://livestream.test/index.m3u8",
+            "display_logo_overlay": false,
+            "ga_live_stream_feed_cid": "f20f5f70-6e0d-47ab-ac77-e14316a03bc4",
+            "player_code": "<div></div>",
+            "livestream_feeds": [
+                {
+                    "profile": "ga-main",
+                    "player_code": "<div></div>",
+                    "cid": "0d06e16b-87b9-491b-9edf-2ccac45f917e",
+                    "created_at": "2021-10-06T14:55:01.763248Z",
+                    "updated_at": "2021-10-28T14:47:18.120592Z",
+                    "associated_tvss_feed": "f20f5f70-6e0d-47ab-ac77-e14316a03bc4",
+                    "non_drm_url": "",
+                    "drm_hls_url": "https://livestream.test/hls",
+                    "drm_dash_url": "https://livestream.test/dash",
+                    "fairplay_license": "https://livestream.test/license/fairplay/hls",
+                    "fairplay_certificate": "https://livestream.test/fairplay-cert",
+                    "widevine_license": "https://livestream.test/license/widevine/dash",
+                    "playready_license": "https://livestream.test/license/playready/dash",
+                    "logo_overlay": false
+                },
+                {
+                    "profile": "kids-main",
+                    "player_code": "",
+                    "cid": "8b121cda-daf8-48d9-b80b-53adac4fa0bf",
+                    "created_at": "2021-10-28T14:47:18.188543Z",
+                    "updated_at": "2021-10-28T14:47:18.188564Z",
+                    "associated_tvss_feed": "0cbc335f-919f-494a-8987-dd0005e19a6f",
+                    "non_drm_url": "https://livestream.test/kids",
+                    "drm_hls_url": "https://livestream.test/kids/hls",
+                    "drm_dash_url": "https://livestream.test/kids/dash",
+                    "fairplay_license": "https://livestream.test/kids/license/fairplay/hls",
+                    "fairplay_certificate": "https://livestream.test/kids/fairplay-cert",
+                    "widevine_license": "https://livestream.test/kids/license/widevine/dash",
+                    "playready_license": "https://livestream.test/kids/license/playready/dash",
+                    "logo_overlay": false
+                }
+            ]
         }
     },
     "meta": {

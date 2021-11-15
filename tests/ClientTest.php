@@ -7,6 +7,7 @@ namespace OpenPublicMedia\PbsStationManager\Test;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 use OpenPublicMedia\PbsStationManager\Client;
+use OpenPublicMedia\PbsStationManager\Entity\LivestreamFeed;
 use OpenPublicMedia\PbsStationManager\Entity\Station;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
@@ -101,8 +102,12 @@ class ClientTest extends TestCase
     public function testGetStationInternal(): void
     {
         $this->mockHandler->append($this->jsonResponse('getStation-internal'));
-        $stations = $this->internalClient->getStation('guid');
-        $this->assertInstanceOf(Station::class, $stations);
+        $station = $this->internalClient->getStation('guid');
+        $this->assertInstanceOf(Station::class, $station);
+
+        foreach ($station->getLivestreamFeeds() as $livestreamFeed) {
+            $this->assertInstanceOf(LivestreamFeed::class, $livestreamFeed);
+        }
     }
 
     public function testGetStationsInternal(): void
