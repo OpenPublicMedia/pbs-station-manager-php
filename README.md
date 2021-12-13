@@ -107,3 +107,7 @@ this project.
  - [x] Result/error handling
  - [x] Station entity (`OpenPublicMedia\PbsStationManager\Entity\Station`)
  - [x] Station getters.
+
+### v2
+
+- [x] PHP 8 support

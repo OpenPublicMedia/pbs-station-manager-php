@@ -238,7 +238,7 @@ class Client
      * @param array $ids
      *   GUIDs of specific stations to get.
      *
-     * @return array
+     * @return Station[]
      *   Station instances keyed by Station GUID.
      */
     public function getStations(array $ids = []): array
