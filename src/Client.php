@@ -7,8 +7,7 @@ namespace OpenPublicMedia\PbsStationManager;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
 use League\Uri\Components\Query;
-use League\Uri\Parser;
-use League\Uri\Parser\QueryString;
+use League\Uri\Uri;
 use OpenPublicMedia\PbsStationManager\Entity\Station;
 use Psr\Http\Message\ResponseInterface;
 use RuntimeException;
@@ -174,9 +173,9 @@ class Client
         $page = null;
         if (isset($response['links']) && isset($response['links']['next'])
             && !empty($response['links']['next'])) {
-            $parser = new Parser();
-            $query = $parser($response['links']['next'])['query'];
-            $page = (int) QueryString::extract($query)['page'];
+            $uri = Uri::createFromString($response['links']['next']);
+            $params = Query::createFromUri($uri);
+            $page = (int) $params->get('page');
         }
         return $page;
     }
