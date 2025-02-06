@@ -46,7 +46,8 @@ abstract class EntityBase
 
             // Verify that the property is valid.
             if (!method_exists($this, $method)) {
-                throw new InvalidArgumentException('Invalid property key: ' . $key);
+                trigger_error("Unknown property key: $key", E_USER_WARNING);
+                continue;
             }
 
             // Convert string datetime values (assume format with timezone).
